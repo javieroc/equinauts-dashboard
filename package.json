@@ -19,6 +19,7 @@
     "next": "^9.1.4",
     "null-loader": "^3.0.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-window-size": "^1.2.2"
   }
 }

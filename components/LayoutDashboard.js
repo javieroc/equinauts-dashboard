@@ -1,10 +1,10 @@
 import Head from "next/head";
-import { Layout, Menu, Icon } from "antd";
-import Navbar from "./Navbar";
+import { Layout } from "antd";
+import Navigation from "./Navigation";
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
-export default function LayoutComponent(props) {
+export default function LayoutDashboard(props) {
   const { children, title } = props;
 
   return (
@@ -12,7 +12,7 @@ export default function LayoutComponent(props) {
       <Head>
         <title>{title}</title>
       </Head>
-      <Navbar />
+      <Navigation isAuth={true} />
       <Content style={{ padding: "0 50px" }}>{children}</Content>
     </div>
   );
