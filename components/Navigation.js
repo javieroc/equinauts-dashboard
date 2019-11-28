@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Drawer, Button, Layout, Menu, Avatar, Icon } from "antd";
+import Link from 'next/link'
 
 const { Header } = Layout;
 
@@ -41,14 +42,14 @@ export default class Navigation extends Component {
 
     if (isAuth) {
       return [
-        <Menu.Item key={0}><a onClick={() => this.toggleMobileMenuOpen()}>Dashboard</a></Menu.Item>,
-        <Menu.Item key={1}><a onClick={() => this.toggleMobileMenuOpen()}>Revenue</a></Menu.Item>,
-        <Menu.Item key={2}><a onClick={() => this.toggleMobileMenuOpen()}>Opportunities</a></Menu.Item>,
-        <Menu.Item key={3}><a onClick={() => this.toggleMobileMenuOpen()}>Health</a></Menu.Item>,
-        <Menu.Item key={4}><a onClick={() => this.toggleMobileMenuOpen()}>Key Insgihts</a></Menu.Item>,
-        <Menu.Item key={5}><a onClick={() => this.toggleMobileMenuOpen()}>Profiability</a></Menu.Item>,
-        <Menu.Item key={6}><a onClick={() => this.toggleMobileMenuOpen()}>Settings</a></Menu.Item>,
-        isMobile && <Menu.Item key={100}><a onClick={() => { /*Signout function*/; this.toggleMobileMenuOpen() }}>Sign out</a></Menu.Item>
+        <Menu.Item key={0}><Link href="/dashboard"><a onClick={() => this.toggleMobileMenuOpen()}>Dashboard</a></Link></Menu.Item>,
+        <Menu.Item key={1}><Link href="/revenue"><a onClick={() => this.toggleMobileMenuOpen()}>Revenue</a></Link></Menu.Item>,
+        <Menu.Item key={2}><Link href="/opportunities"><a onClick={() => this.toggleMobileMenuOpen()}>Opportunities</a></Link></Menu.Item>,
+        <Menu.Item key={3}><Link href="/health"><a onClick={() => this.toggleMobileMenuOpen()}>Health</a></Link></Menu.Item>,
+        <Menu.Item key={4}><Link href="/keyinsights"><a onClick={() => this.toggleMobileMenuOpen()}>Key Insgihts</a></Link></Menu.Item>,
+        <Menu.Item key={5}><Link href="/profiability"><a onClick={() => this.toggleMobileMenuOpen()}>Profiability</a></Link></Menu.Item>,
+        <Menu.Item key={6}><Link href="/settings"><a onClick={() => this.toggleMobileMenuOpen()}>Settings</a></Link></Menu.Item>,
+        isMobile && <Menu.Item key={100}><Link href="/dashboard"><a onClick={() => { this.toggleMobileMenuOpen() }}>Sign out</a></Link></Menu.Item>
       ];
     } else {
       return (
