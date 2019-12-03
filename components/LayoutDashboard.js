@@ -13,7 +13,15 @@ export default function LayoutDashboard(props) {
         <title>{title}</title>
       </Head>
       <Navigation isAuth={true} />
-      <Content style={{ padding: "0 50px" }}>{children}</Content>
+      <Content
+        style={{
+          padding: "30px 50px 0 50px",
+          display: "flex",
+          justifyContent: "space-around"
+        }}
+      >
+        {children}
+      </Content>
     </div>
   );
 }
